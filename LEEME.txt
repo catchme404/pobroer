@@ -1,0 +1,228 @@
+TRUJIYORK  -  funciona sin conexión
+===================================
+Creador: catchme404
+
+No usa CDNs, fuentes externas ni bibliotecas: el motor WebGL está en js/engine.js.
+Todo (modelos, sonido, voces) se genera por código.
+
+CÓMO EJECUTARLO
+- Descomprime el ZIP y abre index.html con Chrome, Edge o Firefox (doble clic).
+- Si tu navegador bloquea algo con file://, abre una terminal en la carpeta y ejecuta:
+    python3 -m http.server 8000      (Windows: py -m http.server 8000)
+  y abre http://localhost:8000 (es local, no necesita internet).
+
+CONTROLES
+WASD mover o conducir · Ratón o FLECHAS = cámara (laptop sin ratón) · Clic izq. disparar/atacar
+Clic der. (mantener) apuntar con zoom · Z zoom fijo · 1 pistola, 2 puños, 3 cuchillo
+Shift correr · ESPACIO saltar (a pie) / freno de mano (en coche)
+E entrar/salir del coche, hablar con clientes, comprar (ceviche, pisco sour)
+T celular (◀ ▶ cambia de chat, 1-3 responde; muestra la hora)
+B sobornar a un policía cercano (1-3 elige la cantidad)
+V primera/tercera persona · Q centrar cámara · RUEDA del ratón/touchpad = distancia de cámara
+R recuperar posición · ESC mapa completo · | (barra vertical) cheats
+Y BOTÓN DE PÁNICO: muestra imagen1.png a pantalla completa y pausa el juego; Y otra vez vuelve.
+
+IMPORTANTE - imagen1.png
+- Debe estar en la misma carpeta que index.html. Incluí una imagen de ejemplo (una hoja de
+  cálculo falsa): reemplázala por la tuya conservando el nombre imagen1.png.
+
+HISTORIA (25 misiones)
+Eres Damián Quiñones, peruano, miembro de la banda criminal LA MANADA (jefe: Cristopher).
+Aliados: Fiorella (Club Neón), Vijay Huanaco (Pintura Express), Joseph, Doña Rosa.
+Enemigos: Los Tiburones (líder: Juan José Leyva), el Cap. Einer Alva (policía corrupto) y el
+mafioso extranjero Robert Mussolini.
+- Cap. 1 (1-5): Primer día · Auto de lujo · Cobranza · Ceviche express · Se armó la grande
+- Cap. 2 (6-15): Mensajes sin leer · Sin llamar la atención · Fuego cruzado · Persecución en la
+  avenida · Rescata a Joseph · Dinero sucio · Traición · Asalto al puerto · Cabeza de tiburón ·
+  Rey de la ciudad
+- Cap. 3 (16-25): Un extranjero en TrujiYork · Cobranza en Florencia · Noche de gala (en la
+  discoteca) · Carga delicada · La coima (soborno) · Persecución nocturna · Fuego en El Porvenir ·
+  Paquetes de la discordia · Asalto al Hotel Imperial · Cabeza de la mafia (jefe final)
+- En el menú puedes elegir en qué misión empezar; el juego recuerda la última completada.
+- Algunas misiones ocurren de noche (la hora cambia sola).
+
+LA CIUDAD: TRUJIYORK
+Ciudad grande (12x12 manzanas), desértica/arenosa, rodeada de cerros y un muro perimetral:
+el mapa tiene fin visible. Hay ciclo de día y noche (1 hora de juego = 1 minuto real);
+de noche brillan neones, ventanas, farolas y las luces de los coches.
+Zonas (en el mapa completo y en la esquina del minimapa):
+ 1. El Golf          Residencial, moderna, exclusiva          VERDE    Relativamente alta
+ 2. California       Acomodada, residencial, conectada        VERDE    Relativamente alta
+ 3. San Andrés       Céntrica, residencial, universitaria     AMARILLO Intermedia
+ 4. Centro Histórico Comercial, histórico, concurrido         AMARILLO Variable
+ 5. El Porvenir      Populoso, comercial, trabajador          NARANJA  Riesgo elevado en sectores
+ 6. Florencia de Mora Popular, urbana, densamente poblada     ROJO     Precaución elevada en sectores
+La seguridad afecta a la policía: en El Golf y California llegan más rápido y más patrullas;
+en El Porvenir y Florencia de Mora tardan más en responder.
+Lugares: Club Neón, Cevichería El Lobo, Pintura Express, Casa de Doña Rosa, Mansión de Cristopher,
+Hotel Imperial, Discoteca Marea, Almacén del Puerto, Mirador, Plaza de Armas, Comisaría,
+Mercado de El Porvenir y la Universidad.
+
+MAPA COMPLETO (ESC)
+- Al pulsar ESC se abre el mapa de toda la ciudad con zonas, nivel de seguridad, lugares,
+  tu posición y objetivos. Clic izquierdo = poner waypoint (otro clic cerca = quitarlo),
+  clic derecho = quitar. El waypoint sale en el minimapa y como baliza morada en el mundo.
+  Pasa el ratón por encima para ver el nombre del lugar o la zona. ESC otra vez continúa.
+
+DISCOTECA, CEVICHERÍA Y TIENDAS
+- El Club Neón se puede entrar a pie: hombres formales conversando, chicas bailando, barra y zona VIP.
+  Acércate a alguien y pulsa E para hablar. En la barra (E): pisco sour $25 (+15 vida).
+- Cevichería El Lobo: junto al mostrador pulsa E: ceviche $30 (+45 vida). Además, cerca de la
+  cevichería te recuperas poco a poco si no te busca la policía.
+- Pintura Express: entra con el coche para repintarlo y perder a la policía (si no hay agentes cerca).
+
+POLICÍA: DIÁLOGOS Y SOBORNOS
+- Los policías hablan ("¡Alto, policía!", "Queda detenido...", etc.).
+- Con B cerca de un policía (a pie, o en coche detenido) ofreces $200 / $600 / $1500.
+  Si alcanza, te dejan en paz y se acaba la búsqueda. Cuanto más alta la búsqueda, más cuesta
+  (a 4 estrellas solo el soborno grande tiene opción; a 5 estrellas no aceptan nada).
+  Si es insuficiente, se ofenden: sube 1 estrella y no podrás sobornar de nuevo por 25 s.
+
+CHEATS (tecla |, escribe el nombre y pulsa Enter, o haz clic en el botón)
+ 1. vida        Salud (y coche) al máximo
+ 2. dinero      +$10.000
+ 3. limpio      Quita la búsqueda policial
+ 4. estrellas   Sube 1 estrella de búsqueda
+ 5. auto        Aparece un superdeportivo frente a ti
+ 6. dia         Cambia la hora a las 12:00
+ 7. noche       Cambia la hora a las 23:00
+ 8. inmortal    Invencibilidad (activa/desactiva)
+ 9. supersalto  Super salto (activa/desactiva)
+10. tp          Te teletransporta al waypoint del mapa
+
+OTRAS MEJORAS DE ESTA VERSIÓN
+- Personaje: Damián, conjunto Nike negro con franja blanca, taper fade.
+- Celular con hora, conversaciones y respuestas.
+- Puntería asistida, clic derecho para apuntar, salto, conducción más ágil.
+- Policía: 5 niveles (patrullas, interceptores, SWAT, agentes que disparan, retenes).
+
+
+=====================================================================
+VERSIÓN 5 - CAMBIOS PUNTUALES
+=====================================================================
+PISTAS "CELESTES" / PARPADEO (z-fighting)
+- Causa: el buffer de profundidad no tenía precisión explícita y las capas (suelo, pista, vereda,
+  rayas y decorados) estaban separadas por solo 1-2 cm; al alejarse se mezclaban y asomaba el color
+  del cielo. Solución: el suelo bajó 20 cm, las rayas y decorados subieron, y el contexto WebGL pide
+  depth:true. También subí el plano cercano de la cámara (0.3 -> 0.45) para ganar precisión.
+- Si aún lo ves en una GPU muy antigua: pon la Calidad en "Media" o "Baja" en el menú.
+
+CÁMARA (pensada para laptop)
+- V = primera/tercera persona (se puede elegir también en el menú). En primera persona ves tu arma/puños;
+  en coche ves desde el asiento.
+- Ratón/touchpad o FLECHAS para mirar. Q centra la cámara detrás de ti. Rueda: 3 distancias de cámara.
+- Menú: sensibilidad, campo de visión, invertir giro horizontal/vertical, cámara automática.
+- CORREGIDO: el giro horizontal estaba invertido desde el juego original (ratón a la derecha giraba a
+  la izquierda). Ahora es natural; si lo prefieres como antes, marca "Invertir giro horizontal".
+- La cámara en tercera persona ahora se suaviza y esquiva paredes mejor.
+
+LIGAR EN EL CLUB (solo personajes adultos, 22-30 años, sin contenido explícito)
+- Acércate a una chica del Club Neón y pulsa E. Hay 10 con nombre propio, edad y personalidad:
+  Valeria, Camila, Fernanda, Shirley, Brenda, Milagros, Luciana, Xiomara, Naomi y Daniela
+  (románticas, divertidas o interesadas: cada tipo reacciona distinto a cumplidos, chistes, bailar y tragos).
+- Elige 1-3 en cada turno; la barra rosa muestra su interés. Con interés alto aparece "Darle un beso"
+  (chapar). El beso termina con fundido a negro, te da vida y ella te escribe al celular (con respuestas).
+- Si el interés cae a 0, te rechaza y no hablará contigo por 90 segundos. Los tragos cuestan $25.
+- Las 10 chicas tienen un modelo ~5 veces más detallado que la gente de la calle (rostro, pestañas,
+  labios, joyas, peinados, vestido en capas, tacones, bolso).
+
+CASA CHUSCA (El Golf)
+- Casa de 9 pisos, de colores chillones, balcones torcidos y cúpula dorada. Su letrero dice
+  "DE AHÍ ESCAPARON LAS CHICAS" (cartel visible a distancia). Doña Remedios, la dueña, está en la puerta:
+  pulsa E para escucharla (las chicas del club se escaparon de ahí... y le deben la renta).
+- NOTA: usé "chicas" (mujeres adultas) en vez de "niñas". Si quieres otro texto, cambia la cadena
+  'DE AHÍ ESCAPARON LAS CHICAS' al final de js/world.js (línea con sg('chusca',...)).
+- Otros carteles con texto: Club Neón, Hotel Imperial, Cevichería El Lobo, Pintura Express, Discoteca Marea.
+
+MÚSICA DEL CLUB
+- Pon tus canciones en la carpeta musica/ con estos nombres: musica_1.mp3, musica_2.mp3, ... hasta musica_15.mp3.
+- Suenan solo cerca del Club Neón: fuerte dentro, más baja afuera, y se apagan al alejarte, pausar o usar Y.
+- Van en orden y se repiten. Si falta un archivo, lo salta; si no hay ninguno, no suena nada (la carpeta viene vacía).
+- Formato MP3. Abre el juego con doble clic o con el servidor local (python3 -m http.server 8000).
+
+ESTRUCTURA (js/)
+engine.js motor WebGL (día/noche, emisivos) · core.js reglas, zonas, física, sonido
+world.js ciudad, cerros y locales · char.js personajes y coches · combat.js puntería y disparo
+gang.js enemigos de misión · phone.js celular · police.js policía y sobornos
+story.js diálogos y 25 misiones · hud.js minimapa y mapa completo · main.js controles y bucle
+flirt.js ligar en el club · music.js música del club
+
+
+=====================================================================
+VERSIÓN 6 - PISTAS SIN PARPADEO · NPC CON NOMBRE · INTERFAZ DE VIDRIO
+=====================================================================
+PISTAS "CELESTES" (arreglo definitivo)
+- Antes, el suelo, las pistas, las rayas, las veredas y los pisos de los locales eran cajas que competían por la
+  misma profundidad y, al alejarse, se mezclaban y dejaban ver el color del cielo. Ahora todo lo plano se dibuja en
+  un pase aparte (solo la cara superior, en orden de pintor y sin prueba de profundidad): ya no puede parpadear.
+- Si aun así notas algo raro en una GPU muy vieja, pon la Calidad en "Media" o "Baja" en el menú.
+
+PERSONAJES CON NOMBRE (pulsa E para hablar; llevan su nombre flotando encima y salen en el minimapa/mapa)
+- Alex Ross: tu MEJOR AMIGO (junto a tu punto de inicio, en California). La primera vez te presta $200 y te escribe
+  al celular; sus frases cambian según el capítulo en que vayas. Sale como punto azul con "A" en el minimapa.
+- Cristo (cevichería), Charlie (taller Pintura Express), Omar (Plaza de Armas), Luis (Universidad),
+  Taveo (Mercado de El Porvenir) y Alesso (Hotel Imperial, El Golf). Cada uno tiene sus propias frases.
+- Las chicas del Club Neón (Valeria, Camila, Fernanda...) y Doña Remedios también muestran su nombre al acercarte.
+
+INTERFAZ "LIQUID GLASS" (más limpia)
+- Paneles de vidrio translúcido con desenfoque; información agrupada en una columna ordenada sobre el minimapa
+  (zona, objetivo, cronómetro, waypoint) que solo aparece cuando hay algo que mostrar.
+- Esquina superior derecha compacta (hora, dinero, estrellas, arma). Subtítulos, avisos, celular, panel de ligar,
+  menú y cheats con el mismo estilo. El menú ahora tiene secciones plegables.
+
+(Las funciones de la versión 5 siguen igual: cámara para laptop, ligar en el club, Casa Chusca, música, cheats con |,
+botón de pánico Y con imagen1.png, mapa con Esc y waypoints, 25 misiones.)
+
+
+=====================================================================
+VERSIÓN 7 - CIUDAD COSTERA, ASALTOS Y TRÁFICO
+=====================================================================
+MAPA
+- Ciudad más grande (14x14 manzanas) y de forma irregular: costa con el océano al oeste, borde
+  norte y este con desierto y un recorte en el noreste. El muro sigue la forma de la ciudad.
+- Nueva zona HUANCHACO (junto al mar, seguridad MEDIA): casitas con palmeras, playa y un muelle.
+- Las zonas se reubicaron: Club Neón ahora está en el Centro Histórico; el inicio del juego es California.
+
+GRÁFICOS
+- Calles de color gris neutro: no se tiñen de azul de noche; sólo cambian de brillo día/noche.
+- Sombras proyectadas de edificios y árboles, aceras claras junto a las calles y espuma en la orilla.
+
+PEATONES
+- Más gente, con mochilas, gafas, zapatillas de colores y pelo largo en algunos.
+
+ASALTOS (sólo a pie y sin búsqueda policial)
+- En zonas inseguras puede aparecer un asaltante que te quita un porcentaje de tu dinero:
+  Florencia de Mora 20-30 % · El Porvenir 12-18 % · Centro, San Andrés y Huanchaco 5-8 %.
+  En El Golf y California no hay asaltos. Los asaltantes salen en el minimapa como puntos rojos.
+- Puedes defenderte (disparo o cuchillo) antes de que te alcancen; si te subes a un coche, huyen.
+
+TRÁFICO Y POLICÍA
+- Hay más accidentes: coches estrellados que bloquean la vía y atascos detrás. Los conductores
+  atascados buscan otra calle al cabo de unos segundos.
+- Menos policía: entre 30 y 45 % menos patrullas en todos los niveles de búsqueda.
+
+
+=====================================================================
+VERSIÓN 8 - CITAS, VIKKINGOS, TAVEO, MANSICHE Y EL FINAL
+=====================================================================
+CITAS (js/dates.js)
+- Besa a una chica en el Club Neón. Después aparece su casa en el mapa (con su zona).
+- Ve a su casa y habla con ella (E) para "Recogerla y salir juntos".
+- Elige el plan: Vikkingos ($150), Malecón de Huanchaco ($30), Discoteca Marea ($60) o Mirador (gratis).
+- En el lugar hay una cita por turnos (cumplido, chiste, detalle o escuchar; 1-4 para elegir).
+  Si la cita va bien, sube la relación. Después vuelve a su casa.
+- En su casa, si le caíste bien, puedes entrar (fundido a negro) o despedirte.
+
+LUGARES NUEVOS
+- Vikkingos (restaurante de lujo, El Golf): donde se cena en las citas y en las misiones del final.
+- Casa de Taveo (Huanchaco): casa blanca minimalista. Taveo está afuera y suelta frases de ligue (E).
+  La antigua Casa Chusca y Doña Remedios ya no existen.
+- Estadio Mansiche (Florencia de Mora): concreto, cuatro tribunas, pista atlética, torres de luz y
+  césped natural. Entra por la puerta del oeste.
+
+MISIONES 26-30: EL CIERRE DE DAMIÁN QUIÑONES
+26 Los papeles de Cristopher: el despacho en la mansión revela el pacto con el capitán Alva.
+27 Cena de traición: Cristopher te emboscada en Vikkingos.
+28 Puertas del Mansiche: entrar al estadio, abrirse paso por las tribunas y escapar.
+29 La cancha de la traición: enfrentamiento final con Cristopher en el centro de la cancha.
+30 El cierre: reunión final en el Mirador con Fiorella, Joseph, Vijay, Alex, Taveo y Doña Rosa.
